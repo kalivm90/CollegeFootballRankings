@@ -1,0 +1,25 @@
+{
+  "name": "collegefootballrankings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:ts": "npx tsc",
+    "clean": "rm -fr build",
+    "start": "npm run start:ts && node build/database/populatedb.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/progress": "^2.0.7",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "cfb.js": "^4.3.2",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3",
+    "progress": "^2.0.3"
+  }
+}
