@@ -5,7 +5,7 @@ export interface TeamDocument extends Document {
     school: string,
     mascot?: string,
     abbreviation: string,
-    conference: string, 
+    conference: mongoose.Types.ObjectId, 
     color?: string,
     altColor?: string
     logos?: string[],
@@ -34,7 +34,7 @@ const TeamModel: Schema<TeamDocument> = new Schema({
     school: String,
     mascot: String,
     abbreviation: String,
-    conference: String, 
+    conference: {type: Schema.Types.ObjectId, ref: "Conference"},
     color: String,
     altColor: String,
     logos: [String],

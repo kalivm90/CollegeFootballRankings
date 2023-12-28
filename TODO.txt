@@ -1,6 +1,5 @@
-1. Nothing is in the DB at the moment. Test all models and make sure there is nothing missing when uploaded.
-2. Build ranking model 
+1. Unit tests for populatedb.ts (mock data)
 
 -------------------------------------------------------------------------- DONE ----------------------------------------------------------------------------------
 
-1. Schema for most of the models are done and there is a good script to populate the collections if they are not already there.
+1. Added relations to docuemnts as well as a rankings collection and started building testing infrastructure.

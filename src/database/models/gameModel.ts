@@ -13,16 +13,16 @@ export interface GameDocument extends Document {
     venueId?: number;
     venue: string;
     homeId: number;
-    homeTeam: string;
-    homeConference: string;
+    homeTeam: mongoose.Types.ObjectId;
+    homeConference: mongoose.Types.ObjectId;
     homePoints: number;
     homeLineScores: number[];
     homePostWinProb?: number;
     homePregameElo?: number;
     homePostgameElo?: number;
     awayId: number;
-    awayTeam: string;
-    awayConference: string;
+    awayTeam: mongoose.Types.ObjectId;
+    awayConference: mongoose.Types.ObjectId;
     awayPoints: number;
     awayLineScores: number[];
     awayPostWinProb?: number;
@@ -46,16 +46,20 @@ export interface GameDocument extends Document {
     venueId: { type: Number },
     venue: { type: String },
     homeId: { type: Number },
-    homeTeam: { type: String },
-    homeConference: { type: String },
+    // homeTeam: { type: String },
+    // homeConference: { type: String },
+    homeTeam: {type: Schema.Types.ObjectId, ref: "Team"},
+    homeConference: {type: Schema.Types.ObjectId, ref: "Conference"},
     homePoints: { type: Number },
     homeLineScores: { type: [Number] },
     homePostWinProb: { type: Number },
     homePregameElo: { type: Number },
     homePostgameElo: { type: Number },
     awayId: { type: Number },
-    awayTeam: { type: String },
-    awayConference: { type: String },
+    // awayTeam: { type: String },
+    // awayConference: { type: String },
+    awayTeam: {type: Schema.Types.ObjectId, ref: "Team"},
+    awayConference: {type: Schema.Types.ObjectId, ref: "Conference"},
     awayPoints: { type: Number },
     awayLineScores: { type: [Number] },
     awayPostWinProb: { type: Number },

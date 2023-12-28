@@ -11,7 +11,7 @@ export interface ConferenceDocument extends Document {
 
 const ConferenceModel: Schema<ConferenceDocument> = new Schema({
     conferenceId: {type: Number, unique: true},
-    name: {type: String, unique: true},
+    name: String,
     shortName: String,
     abbreviation: String,
     classification: String,

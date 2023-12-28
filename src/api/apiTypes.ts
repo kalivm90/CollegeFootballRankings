@@ -1,3 +1,4 @@
+// Game
 export interface ApiGame {
     id: number;
     season: number;
@@ -31,11 +32,41 @@ export interface ApiGame {
     notes: string | null;
 }
 
+// Conference
 export interface ApiConference {
     id: number;
     name: string;
     shortName: string;
     abbreviation: string;
     classification: string;
-  }
+}
   
+// Team
+export interface ApiTeam {
+    id: number,
+    school: string,
+    mascot?: string,
+    abbreviation: string,
+    conference: string, 
+    color?: string,
+    altColor?: string
+    logos?: string[],
+    location: ApiTeamLocation,
+}
+
+interface ApiTeamLocation {
+    venue_id?: number,
+    name?: string,
+    city?: string,
+    state?: string,
+    zip?: string,
+    country_code?: string,
+    timezone?: string,
+    latitude?: number,
+    longitude?: number,
+    elevation?: string,
+    capacity?: number,
+    year_constructed?: number,
+    grass: boolean,
+    dome: boolean,
+}
